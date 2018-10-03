@@ -1,7 +1,7 @@
 bin/
 target/
 src/webapp/dist/
-src/webapp/node_module/
+src/webapp/node_modules/
 src/main/resources/static/
 .setting/
 .project
