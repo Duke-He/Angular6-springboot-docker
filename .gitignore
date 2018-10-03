@@ -37,3 +37,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+/src//webapp/node_modules/
+/src//webapp/dist
+/src/main/resources/static/
