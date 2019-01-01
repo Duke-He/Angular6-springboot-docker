@@ -10,16 +10,16 @@ services:
    volumes:
    - ../nginx/conf.d:/etc/nginx/conf.d
     
-  mysql:
-   container_name: v-mysql
-   image: mysql/mysql-server:5.7
-   environment:
-    MYSQL_DATABASE: test
-    MYSQL_ROOT_PASSWORD: password
-    MYSQL_ROOT_HOST: '%'
-   ports:
-   - "3307:3306"
-   restart: always
+  # mysql:
+  #  container_name: v-mysql
+  #  image: mysql/mysql-server:5.7
+  #  environment:
+  #   MYSQL_DATABASE: test
+  #   MYSQL_ROOT_PASSWORD: password
+  #   MYSQL_ROOT_HOST: '%'
+  #  ports:
+  #  - "3307:3306"
+  #  restart: always
     
   app:
     restart: always
@@ -32,5 +32,5 @@ services:
       - "8080"
     depends_on:
       - nginx
-      - mysql
+      #- mysql
     command: mvn clean spring-boot:run -Dspring-boot.run.profiles=docker
